@@ -11,7 +11,7 @@
  */
 class Plugin_Language extends Plugin
 {
-	public $version = '1.0.0';
+	public $version = '1.0.1';
 
 	public $name = array(
 		'en'	=> 'Language Switcher'
@@ -99,7 +99,7 @@ class Plugin_Language extends Plugin
 		$default_lang	= config_item('language') != $site_lang ? config_item('language') : $site_lang;
       			
 		// Get languages data from cache
-		if ( !($data = $this->pyrocache->get('language-switcher-{$site_lang}')))
+		if ( !($data = $this->pyrocache->get('language-switcher-'.$default_lang)))
 		{	
 			// Get Only Public Languages
 			$public			= explode(",", Settings::get('site_public_lang'));
@@ -164,7 +164,7 @@ class Plugin_Language extends Plugin
 			// Put the first the current language
 			array_unshift($data, $current_lang);
 			
-			$this->pyrocache->write($data, 'language-switcher-{$default_lang}', 1000); // Save to cache
+			$this->pyrocache->write($data, 'language-switcher-'.$default_lang, 1000); // Save to cache
 		}
 		
 		return $data;
