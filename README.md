@@ -8,13 +8,13 @@ This plugin doesnt provide "Google Translate" service. Just allow users to chang
 Usage:
 
 <pre>
-<ul class="dropdown-menu">
-
-     {{ language:switcher mode="png" }}
+     <ul class="dropdown-menu">
      
-     <li><a href="{{ link }}">{{ img }} {{ name }}</a></li>
-
-     {{ /language:switcher }}
-
-</ul>
-<pre>
+          {{ language:switcher mode="png" }}
+          
+          <li><a href="{{ link }}">{{ img }} {{ name }}</a></li>
+     
+          {{ /language:switcher }}
+     
+     </ul>
+</pre>
