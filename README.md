@@ -7,6 +7,7 @@ This plugin doesnt provide "Google Translate" service. Just allow users to chang
 
 Usage:
 
+<pre>
 <ul class="dropdown-menu">
 
      {{ language:switcher mode="png" }}
@@ -16,3 +17,4 @@ Usage:
      {{ /language:switcher }}
 
 </ul>
+<pre>
