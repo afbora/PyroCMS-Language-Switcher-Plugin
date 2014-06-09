@@ -148,9 +148,9 @@ class Plugin_Language extends Plugin
 					} 	// Language Image: <img src="addons/shared_addons/plugins/language/img/png/en.png" />
 					
 					// Keep lang if current
-					if($default_lang == $lang[folder])
+					if($default_lang == $lang['folder'])
 					{
-						$lang['selected']		= ' selected';
+						$lang['selected']		= 'selected';
 						$current_lang 			= $lang;
 					}
 					else
